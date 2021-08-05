@@ -22,17 +22,11 @@ const FormularioTareas = ({tasks,changeTasks}) => {
         };
         var flag ="alert-secondary";
         var typesa =["primary","secondary","danger","success","warning","info","ligth","dark"];
-        for ( var j=0;i<typesa.length;j++){
-            console.log(typesa[j]);
-            if (typesa[j]==tp){
-            flag=typesa[j]
-            break;
-            }
-        };
+        
         db.collection('tasks')
         .add({
         text: inputTask,
-        type: flag
+        type: tp
         });
         
         changeInputTask('');
